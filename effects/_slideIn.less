@@ -1,0 +1,56 @@
+/* SLIDE IN */
+.keyframes(~"slideInDown", {
+  from {
+    .prefixed(transform, translate3d(0,-100%,0));
+    visibility: visible;
+  }
+  to {
+    .prefixed(transform, translate3d(0,0,0));
+  }
+});
+
+.slideInDown() {
+  .prefixed(animation-name, ~"slideInDown");
+}
+
+.keyframes(~"slideInLeft", {
+  from {
+    .prefixed(transform, translate3d(-100%,0,0));
+    visibility: visible;
+  }
+  to {
+    .prefixed(transform, translate3d(0,0,0));
+  }
+});
+
+.slideInLeft() {
+  .prefixed(animation-name, ~"slideInLeft");
+}
+
+.keyframes(~"slideInRight", {
+  from {
+    .prefixed(transform, translate3d(100%,0,0));
+    visibility: visible;
+  }
+  to {
+    .prefixed(transform, translate3d(0,0,0));
+  }
+});
+
+.slideInRight() {
+  .prefixed(animation-name, ~"slideInRight");
+}
+
+.keyframes(~"slideInUp", {
+  from {
+    .prefixed(transform, translate3d(0,100%,0));
+    visibility: visible;
+  }
+  to {
+    .prefixed(transform, translate3d(0,100%,0));
+  }
+});
+
+.slideInUp() {
+  .prefixed(animation-name, ~"slideInUp");
+}

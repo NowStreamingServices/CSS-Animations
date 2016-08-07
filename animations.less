@@ -1,0 +1,915 @@
+@import "_options";
+@import "_mixins";
+@import "_hacks";
+
+.animated {
+  .prefixed(animation-duration, @slowDuration);
+  .prefixed(animation-fill-mode, both);
+  .hacks();
+  &.infinite {
+    .prefixed(animation-iteration-count, infinite);
+  }
+}
+
+& when(@includeBounce = true) {
+  @import "effects/_bounce";
+  @import "effects/_bounceIn";
+  @import "effects/_bounceOut";
+  & when(@includeAllClasses = true) {
+    .bounce {
+      .bounce();
+    }
+    .bounceIn {
+      .bounceIn();
+      &-down {
+        .bounceInDown();
+      }
+      &-left {
+        .bounceInLeft();
+      }
+      &-right {
+        .bounceInRight();
+      }
+      &-up {
+        .bounceInUp();
+      }
+    }
+    .bounceOut {
+      .bounceOut();
+      &-down {
+        .bounceOutDown();
+      }
+      &-left {
+        .bounceOutLeft();
+      }
+      &-right {
+        .bounceOutRight();
+      }
+      &-up {
+        .bounceOutUp();
+      }
+    }
+  }
+}
+
+& when(@includeFlash = true) {
+  @import "effects/_flash";
+  & when(@includeAllClasses = true) {
+    .flash {
+      .flash();
+    }
+  }
+}
+
+& when(@includePulse = true) {
+  @import "effects/_pulse";
+  & when(@includeAllClasses = true) {
+    .pulse {
+      .pulse();
+    }
+  }
+}
+
+& when(@includeRubberBand = true) {
+  @import "effects/_rubberBand";
+  & when(@includeAllClasses = true) {
+    .rubberBand {
+      .rubberBand();
+    }
+  }
+}
+
+& when(@includeShake = true) {
+  @import "effects/_shake";
+  @import "effects/_headShake";
+  & when(@includeAllClasses = true) {
+    .shake {
+      .shake();
+    }
+    .headShake {
+      .headShake();
+    }
+  }
+}
+
+& when(@includeSwing = true) {
+  @import "effects/_swing";
+  & when(@includeAllClasses = true) {
+    .swing{
+      .swing();
+    }
+  }
+}
+
+& when(@includeTada = true) {
+  @import "effects/_tada";
+  & when(@includeAllClasses = true) {
+    .tada {
+      .tada();
+    }
+  }
+}
+
+& when(@includeWobble = true) {
+  @import "effects/_wobble";
+  & when(@includeAllClasses = true) {
+    .wobble {
+      .wobble();
+    }
+  }
+}
+
+& when(@includeJello = true) {
+  @import "effects/_jello";
+  & when(@includeAllClasses = true) {
+    .jello {
+      .jello();
+    }
+  }
+}
+
+& when(@includeFade = true) {
+  @import "effects/_fadeIn";
+  @import "effects/_fadeOut";
+  & when(@includeAllClasses = true) {
+    .fadeIn {
+      .fadeIn();
+      &-down {
+        .fadeInDown();
+        &-big {
+          .fadeInDownBig();
+        }
+      }
+      &-left {
+        .fadeInLeft();
+        &-big {
+          .fadeInLeftBig();
+        }
+      }
+      &-right {
+        .fadeInRight();
+        &-big {
+          .fadeInRightBig();
+        }
+      }
+      &-up {
+        .fadeInUp();
+        &-big {
+          .fadeInUpBig();
+        }
+      }
+    }
+    .fadeOut {
+      .fadeOut();
+      &-down {
+        .fadeOutDown();
+        &-big {
+          .fadeOutDownBig();
+        }
+      }
+      &-left {
+        .fadeOutLeft();
+        &-big {
+          .fadeOutLeftBig();
+        }
+      }
+      &-right {
+        .fadeOutRight();
+        &-big {
+          .fadeOutRightBig();
+        }
+      }
+      &-up {
+        .fadeOutUp();
+        &-big {
+          .fadeOutUpBig();
+        }
+      }
+    }
+  }
+}
+
+& when(@includeFlip = true) {
+  @import "effects/_flip";
+  @import "effects/_flipIn";
+  @import "effects/_flipOut";
+  & when(@includeAllClasses = true) {
+    .flip {
+      .flip();
+    }
+    .flipInX {
+      .flipInX();
+    }
+    .flipInY {
+      .flipInY();
+    }
+    .flipOutX {
+      .flipOutX();
+    }
+    .flipOutY {
+      .flipOutY();
+    }
+  }
+}
+
+& when(@includeLightSpeed = true) {
+  @import "effects/_lightSpeed";
+  & when(@includeAllClasses = true) {
+    .lightSpeedIn {
+      .lightSpeedIn();
+    }
+    .lightSpeedOut {
+      .lightSpeedOut();
+    }
+  }
+}
+
+& when(@includeRotate = true) {
+  @import "effects/_rotateIn";
+  @import "effects/_rotateOut";
+  & when(@includeAllClasses = true) {
+    .rotateIn {
+      .rotateIn();
+      &-downLeft {
+        .rotateInDownLeft();
+      }
+      &-downRight {
+        .rotateInDownRight();
+      }
+      &-upLeft {
+        .rotateInUpLeft();
+      }
+      &-upRight {
+        .rotateInUpRight();
+      }
+    }
+    .rotateOut {
+      .rotateOut();
+      &-downLeft {
+        .rotateOutDownLeft();
+      }
+      &-downRight {
+        .rotateOutDownRight();
+      }
+      &-upLeft {
+        .rotateOutUpLeft();
+      }
+      &-upRight {
+        .rotateOutUpRight();
+      }
+    }
+  }
+}
+
+& when(@includeHinge = true) {
+  @import "effects/_hinge";
+  & when(@includeAllClasses = true) {
+    .hinge {
+      .hinge();
+    }
+  }
+}
+
+& when(@includeRoll = true) {
+  @import "effects/_roll";
+  & when(@includeAllClasses = true) {
+    .rollIn {
+      .rollIn();
+    }
+    .rollOut {
+      .rollOut();
+    }
+  }
+}
+
+& when(@includeZoom = true) {
+  @import "effects/_zoomIn";
+  @import "effects/_zoomOut";
+  & when(@includeAllClasses = true) {
+    .zoomIn {
+      .zoomIn();
+      &-down {
+        .zoomInDown();
+      }
+      &-left {
+        .zoomInLeft();
+      }
+      &-right {
+        .zoomInRight();
+      }
+      &-up {
+        .zoomInUp();
+      }
+    }
+    .zoomOut {
+      .zoomOut();
+      &-down {
+        .zoomOutDown();
+      }
+      &-left {
+        .zoomOutLeft();
+      }
+      &-right {
+        .zoomOutRight();
+      }
+      &-up {
+        .zoomOutUp();
+      }
+    }
+  }
+}
+
+& when(@includeSlide = true) {
+  @import "effects/_slideIn";
+  @import "effects/_slideOut";
+  & when(@includeAllClasses = true) {
+    .slideIn {
+      &-down {
+        .slideInDown();
+      }
+      &-left {
+        .slideInLeft();
+      }
+      &-right {
+        .slideInRight();
+      }
+      &-up {
+        .slideInUp();
+      }
+    }
+    .slideOut {
+      &-down {
+        .slideOutDown();
+      }
+      &-left {
+        .slideOutLeft();
+      }
+      &-right {
+        .slideOutRight();
+      }
+      &-up {
+        .slideOutUp();
+      }
+    }
+  }
+}
+
+& when(@includeHvrCreds = true) {
+  /*!
+ * Hover.css (http://ianlunn.github.io/Hover/)
+ * Version: 2.0.2
+ * Author: Ian Lunn @IanLunn
+ * Author URL: http://ianlunn.co.uk/
+ * Github: https://github.com/IanLunn/Hover
+
+ * Made available under a MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+
+ * Hover.css Copyright Ian Lunn 2014. Generated with LESS.
+ */
+}
+/* 2D ANIMATIONS */
+& when(@includeHvrGrow = true) {
+  @import "hover-effects/2d-animations/_grow";
+  @import "hover-effects/2d-animations/_grow-rotate";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-grow {
+      .grow();
+    }
+    .@{nameSpace}-grow-rotate {
+      .grow-rotate();
+    }
+  }
+}
+
+& when(@includeHvrShrink = true) {
+  @import "hover-effects/2d-animations/_shrink";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-shrink {
+      .shrink();
+    }
+  }
+}
+
+& when(@includeHvrPulse = true) {
+  @import "hover-effects/2d-animations/_pulse";
+  @import "hover-effects/2d-animations/_pulse-grow";
+  @import "hover-effects/2d-animations/_pulse-shrink";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-pulse {
+      .pulse();
+      &-grow {
+        .pulse-grow();
+      }
+      &-shrink {
+        .pulse-shrink();
+      }
+    }
+  }
+}
+
+& when(@includeHvrPush = true) {
+  @import "hover-effects/2d-animations/_push";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-push {
+      .push();
+    }
+  }
+}
+
+& when(@includeHvrPop = true) {
+  @import "hover-effects/2d-animations/_pop";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-pop {
+      .pop();
+    }
+  }
+}
+
+& when(@includeHvrBounce = true) {
+  @import "hover-effects/2d-animations/_bounce-in";
+  @import "hover-effects/2d-animations/_bounce-out";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-bounce {
+      &-in {
+        .bounce-in();
+      }
+      &-out {
+        .bounce-out();
+      }
+    }
+  }
+}
+
+& when(@includeHvrRotate = true) {
+  @import "hover-effects/2d-animations/_rotate";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-rotate {
+      .rotate();
+    }
+  }
+}
+
+& when(@includeHvrFloat = true) {
+  @import "hover-effects/2d-animations/_float";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-float {
+      .float();
+    }
+  }
+}
+
+& when(@includeHvrSink = true) {
+  @import "hover-effects/2d-animations/_sink";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-sink {
+      .sink();
+    }
+  }
+}
+
+& when(@includeHvrBob = true) {
+  @import "hover-effects/2d-animations/_bob";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-bob {
+      .bob();
+    }
+  }
+}
+
+& when(@includeHvrHang = true) {
+  @import "hover-effects/2d-animations/_hang";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-hang {
+      .hang();
+    }
+  }
+}
+
+& when(@includeHvrSkew = true) {
+  @import "hover-effects/2d-animations/_skew";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-skew {
+      .skew();
+      &-forward {
+        .skew-forward();
+      }
+      &-backward {
+        .skew-backward();
+      }
+    }
+  }
+}
+
+& when(@includeHvrWobble = true) {
+  @import "hover-effects/2d-animations/_wobble-bottom";
+  @import "hover-effects/2d-animations/_wobble-top";
+  @import "hover-effects/2d-animations/_wobble-horizontal";
+  @import "hover-effects/2d-animations/_wobble-vertical";
+  @import "hover-effects/2d-animations/_wobble-skew";
+  @import "hover-effects/2d-animations/_wobble-to-bottom-right";
+  @import "hover-effects/2d-animations/_wobble-to-top-right";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-wobble {
+      &-bottom {
+        .wobble-bottom();
+      }
+      &-top {
+        .wobble-top();
+      }
+      &-horizontal {
+        .wobble-horizontal();
+      }
+      &-vertical {
+        .wobble-vertical();
+      }
+      &-skew {
+        .wobble-skew();
+      }
+      &-bottomRight {
+        .wobble-to-bottom-right();
+      }
+      &-topRight {
+        .wobble-to-top-right();
+      }
+    }
+  }
+}
+
+& when(@includeHvrBuzz = true) {
+  @import "hover-effects/2d-animations/_buzz";
+  @import "hover-effects/2d-animations/_buzz-out";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-buzz {
+      .buzz();
+      &-out {
+        .buzz-out();
+      }
+    }
+  }
+}
+
+/* BACKGROUND ANIMATIONS */
+& when(@includeHvrBackFade = true) {
+  @import "hover-effects/background-animations/_fade";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-fade {
+      .backFade();
+    }
+  }
+}
+
+& when(@includeHvrBackPulse = true) {
+  @import "hover-effects/background-animations/_back-pulse";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-back-pulse {
+      .back-pulse();
+    }
+  }
+}
+
+& when(@includeHvrSweep = true) {
+  @import "hover-effects/background-animations/_sweep-to-bottom";
+  @import "hover-effects/background-animations/_sweep-to-left";
+  @import "hover-effects/background-animations/_sweep-to-right";
+  @import "hover-effects/background-animations/_sweep-to-top";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-sweep-to {
+      &-bottom {
+        .sweep-to-bottom();
+      }
+      &-left {
+        .sweep-to-left();
+      }
+      &-right {
+        .sweep-to-right();
+      }
+      &-top {
+        .sweep-to-top();
+      }
+    }
+  }
+}
+
+& when(@includeHvrBounceBack = true) {
+  @import "hover-effects/background-animations/_bounce-to-bottom";
+  @import "hover-effects/background-animations/_bounce-to-left";
+  @import "hover-effects/background-animations/_bounce-to-right";
+  @import "hover-effects/background-animations/_bounce-to-top";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-bounce-to {
+      &-bottom {
+        .bounce-to-bottom();
+      }
+      &-left {
+        .bounce-to-left();
+      }
+      &-right {
+        .bounce-to-right();
+      }
+      &-top {
+        .bounce-to-top();
+      }
+    }
+  }
+}
+
+& when(@includeHvrRadial = true) {
+  @import "hover-effects/background-animations/_radial-in";
+  @import "hover-effects/background-animations/_radial-out";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-radial {
+      &-in {
+        .radial-in();
+      }
+      &-out {
+        .radial-out();
+      }
+    }
+  }
+}
+
+& when(@includeHvrRectangle = true) {
+  @import "hover-effects/background-animations/_rectangle-in";
+  @import "hover-effects/background-animations/_rectangle-out";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-rectangle {
+      &-in {
+        .rectangle-in();
+      }
+      &-out {
+        .rectangle-out();
+      }
+    }
+  }
+}
+
+& when(@includeHvrShutter = true) {
+  @import "hover-effects/background-animations/_shutter-in-horizontal";
+  @import "hover-effects/background-animations/_shutter-in-vertical";
+  @import "hover-effects/background-animations/_shutter-out-horizontal";
+  @import "hover-effects/background-animations/_shutter-out-vertical";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-shutter {
+      &-in {
+        &-horizontal {
+          .shutter-in-horizontal();
+        }
+        &-vertical {
+          .shutter-in-vertical();
+        }
+      }
+      &-out {
+        &-horizontal {
+          .shutter-out-horizontal();
+        }
+        &-vertical {
+          .shutter-out-vertical();
+        }
+      }
+    }
+  }
+}
+
+/* BORDER ANIMATIONS */
+& when(@includeHvrBorderFade = true) {
+  @import "hover-effects/border-animations/_border-fade";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-border-fade {
+      .border-fade();
+    }
+  }
+}
+
+& when(@includeHvrHollow = true) {
+  @import "hover-effects/border-animations/_hollow";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-hollow {
+      .hollow();
+    }
+  }
+}
+
+& when(@includeHvrTrim = true) {
+  @import "hover-effects/border-animations/_trim";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-trim {
+      .trim();
+    }
+  }
+}
+
+& when(@includeHvrRipple = true) {
+  @import "hover-effects/border-animations/_ripple-in";
+  @import "hover-effects/border-animations/_ripple-out";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-ripple {
+      &-in {
+        .ripple-in();
+      }
+      &-out {
+        .ripple-out();
+      }
+    }
+  }
+}
+
+& when(@includeHvrOutline = true) {
+  @import "hover-effects/border-animations/_outline-in";
+  @import "hover-effects/border-animations/_outline-out";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-outline {
+      &-in {
+        .outline-in();
+      }
+      &-out {
+        .outline-out();
+      }
+    }
+  }
+}
+
+& when(@includeHvrRoundCorner = true) {
+  @import "hover-effects/border-animations/_round-corners";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-round-corners {
+      .round-corners();
+    }
+  }
+}
+
+& when(@includeHvrUnderline = true) {
+  @import "hover-effects/border-animations/_underline-from-center";
+  @import "hover-effects/border-animations/_underline-from-left";
+  @import "hover-effects/border-animations/_underline-from-right";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-underline-from {
+      &-center {
+        .underline-from-center();
+      }
+      &-left {
+        .underline-from-left();
+      }
+      &-right {
+        .underline-from-right();
+      }
+    }
+  }
+}
+
+& when(@includeHvrOverline = true) {
+  @import "hover-effects/border-animations/_overline-from-center";
+  @import "hover-effects/border-animations/_overline-from-left";
+  @import "hover-effects/border-animations/_overline-from-right";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-overline-from {
+      &-center {
+        .overline-from-center();
+      }
+      &-left {
+        .overline-from-left();
+      }
+      &-right {
+        .overline-from-right();
+      }
+    }
+  }
+}
+
+& when(@includeHvrReveal = true) {
+  @import "hover-effects/border-animations/_reveal";
+  @import "hover-effects/border-animations/_underline-reveal";
+  @import "hover-effects/border-animations/_overline-reveal";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-reveal {
+      .reveal();
+      &-underline {
+        .underline-reveal();
+      }
+      &-overline {
+        .overline-reveal();
+      }
+    }
+  }
+}
+
+/* CURL ANIMATIONS */
+& when(@includeHvrCurl = true) {
+  @import "hover-effects/curls/_curl-bottom-left";
+  @import "hover-effects/curls/_curl-bottom-right";
+  @import "hover-effects/curls/_curl-top-left";
+  @import "hover-effects/curls/_curl-top-right";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-curl {
+      &-bottom {
+        &-left {
+          .curl-bottom-left();
+        }
+        &-right {
+          .curl-bottom-right();
+        }
+      }
+      &-top {
+        &-left {
+          .curl-top-left();
+        }
+        &-right {
+          .curl-top-right();
+        }
+      }
+    }
+  }
+}
+
+/* SHADOW & GLOW ANIMATIONS */
+& when(@includeHvrGlow = true) {
+  @import "hover-effects/shadow-and-glow-animations/_glow";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-glow {
+      .glow();
+    }
+  }
+}
+
+& when(@includeHvrShadow = true) {
+  @import "hover-effects/shadow-and-glow-animations/_shadow";
+  @import "hover-effects/shadow-and-glow-animations/_grow-shadow";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-shadow {
+      .shadow();
+      &-grow {
+        .grow-shadow();
+      }
+    }
+  }
+}
+
+& when(@includeHvrAdvShadow = true) {
+  @import "hover-effects/shadow-and-glow-animations/_box-shadow-inset";
+  @import "hover-effects/shadow-and-glow-animations/_box-shadow-outset";
+  @import "hover-effects/shadow-and-glow-animations/_float-shadow";
+  @import "hover-effects/shadow-and-glow-animations/_shadow-radial";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-shadow {
+      &-inset {
+        .box-shadow-inset();
+      }
+      &-outset {
+        .box-shadow-outset();
+      }
+      &-float {
+        .float-shadow();
+      }
+      &-radial {
+        .shadow-radial();
+      }
+    }
+  }
+}
+
+/* SPEECH BUBBLE ANIMATIONS */
+& when(@includeHvrBubble = true) {
+  @import "hover-effects/speech-bubbles/_bubble-top";
+  @import "hover-effects/speech-bubbles/_bubble-right";
+  @import "hover-effects/speech-bubbles/_bubble-bottom";
+  @import "hover-effects/speech-bubbles/_bubble-left";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-bubble {
+      &-top {
+        .bubble-top();
+      }
+      &-right {
+        .bubble-right();
+      }
+      &-bottom {
+        .bubble-bottom();
+      }
+      &-left {
+        .bubble-left();
+      }
+    }
+  }
+}
+
+& when(@includeHvrBubbleFloat = true) {
+  @import "hover-effects/speech-bubbles/_bubble-float-top";
+  @import "hover-effects/speech-bubbles/_bubble-float-right";
+  @import "hover-effects/speech-bubbles/_bubble-float-bottom";
+  @import "hover-effects/speech-bubbles/_bubble-float-left";
+  & when(@includeAllClasses = true) {
+    .@{nameSpace}-bubble-float {
+      &-top {
+        .bubble-float-top();
+      }
+      &-right {
+        .bubble-float-right();
+      }
+      &-bottom {
+        .bubble-float-bottom();
+      }
+      &-left {
+        .bubble-float-left();
+      }
+    }
+  }
+}

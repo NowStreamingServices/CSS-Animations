@@ -1,0 +1,82 @@
+/* ZOOM IN */
+.keyframes(~"zoomIn", {
+  from {
+    opacity: 0;
+    .prefixed(transform, scale3d(.3,.3,.3));
+  }
+  50% {
+    opacity: 1;
+  }
+});
+
+.zoomIn() {
+  .prefixed(animation-name, ~"zoomIn");
+}
+
+.keyframes(~"zoomInDown", {
+  from {
+    opacity: 0;
+    .prefixed(transform, scale3d(.1,.1,.1) translate3d(0,-1000px,0));
+    .prefixed(animation-timing-function, cubic-bezier(0.550, 0.055, 0.675, 0.190));
+  }
+  60% {
+    opacity: 1;
+    .prefixed(transform, scale3d(.475,.475,.475) translate3d(0,60px,0));
+    .prefixed(animation-timing-function, cubic-bezier(0.175, 0.885, 0.320, 1));
+  }
+});
+
+.zoomInDown() {
+  .prefixed(animation-name, ~"zoomInDown");
+}
+
+.keyframes(~"zoomInLeft", {
+  from {
+    opacity: 0;
+    .prefixed(transform, scale3d(.1,.1,.1) translate3d(-1000px,0,0));
+    .prefixed(animation-timing-function, cubic-bezier(0.550, 0.055, 0.675, 0.190));
+  }
+  60% {
+    opacity: 1;
+    .prefixed(transform, scale3d(.475,.475,.475) translate3d(10px, 0,0));
+    .prefixed(animation-timing-function, cubic-bezier(0.175, 0.885, 0.320, 1));
+  }
+});
+
+.zoomInLeft() {
+  .prefixed(animation-name, ~"zoomInLeft");
+}
+
+.keyframes(~"zoomInRight", {
+  from {
+    opacity: 0;
+    .prefixed(transform, scale3d(.1,.1,.1) translate3d(1000px,0,0));
+    .prefixed(animation-timing-function, cubic-bezier(0.550,0.055,0.675,0.190));
+  }
+  60% {
+    opacity: 1;
+    .prefixed(transform, scale3d(.475,.475,.475) translate3d(-10px,0,0));
+    .prefixed(animation-timing-function, cubic-bezier(0.175, 0.885, 0.320, 1));
+  }
+});
+
+.zoomInRight() {
+  .prefixed(animation-name, ~"zoomInRight");
+}
+
+.keyframes(~"zoomInUp", {
+  from {
+    opacity: 0;
+    .prefixed(transform, scale3d(.1,.1,.1) translate3d(0,1000px,0));
+    .prefixed(animation-timing-function, cubic-bezier(0.550, 0.055, 0.675, 0.190));
+  }
+  60% {
+    opacity: 1;
+    .prefixed(transform, scale3d(.475,.475,.475) translate3d(0,-60px,0));
+    .prefixed(animation-timing-function, cubic-bezier(0.175, 0.885, 0.320, 1));
+  }
+});
+
+.zoomInUp() {
+  .prefixed(animation-name, ~"zoomInUp");
+}

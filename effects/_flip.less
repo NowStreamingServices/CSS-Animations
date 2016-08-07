@@ -1,0 +1,28 @@
+/* FLIP */
+.keyframes(~"flip", {
+  from {
+    .prefixed(transform, perspective(400px) rotate3d(0,1,0,-360deg));
+    .prefixed(animation-timing-function, ease-out);
+  }
+  40% {
+    .prefixed(transform, perspective(400px) translate3d(0,0,150px) rotate3d(0,1,0,-190deg));
+    .prefixed(animation-timing-function, ease-out);
+  }
+  50% {
+    .prefixed(transform, perspective(400px) translate3d(0,0,150px) rotate3d(0,1,0,-170deg));
+    .prefixed(animation-timing-function, ease-in);
+  }
+  80% {
+    .prefixed(transform, perspective(400px) scale3d(0.95,0.95,0.95));
+    .prefixed(animation-timing-function, ease-in);
+  }
+  to {
+    .prefixed(transform, perspective(400px));
+    .prefixed(animation-timing-function, ease-in);
+  }
+});
+
+.flip() {
+  .prefixed(animation-name, ~"flip");
+  .prefixed(backface-visiblity, visible);
+}

@@ -1,0 +1,126 @@
+/* FADE OUT (-DOWN, -LEFT, -RIGHT, -UP) */ 
+.keyframes(~"fadeOut", {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+});
+
+.fadeOut() {
+  .prefixed(animation-name, ~"fadeOut");
+}
+
+.keyframes(~"fadeOutDown", {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    .prefixed(transform, translate3d(0,100%,0));
+  }
+});
+
+.fadeOutDown() {
+  .prefixed(animation-name, ~"fadeOutDown");
+}
+
+.keyframes(~"fadeOutLeft", {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    .prefixed(transform, translate3d(-100%,0,0));
+  }
+});
+
+.fadeOutLeft() {
+  .prefixed(animation-name, ~"fadeOutLeft");
+}
+
+.keyframes(~"fadeOutRight", {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    .prefixed(transform, translate3d(100%,0,0));
+  }
+});
+
+.fadeOutRight() {
+  .prefixed(animation-name, ~"fadeOutRight");
+}
+
+.keyframes(~"fadeOutUp", {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    .prefixed(transform, translate3d(0,-100%,0));
+  }
+});
+
+.fadeOutUp() {
+  .prefixed(animation-name, ~"fadeOutUp");
+}
+
+/* FADE OUT BIG */
+.keyframes(~"fadeOutDownBig", {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    .prefixed(transform, translate3d(0,2000px,0));
+  }
+});
+
+.fadeOutDownBig() {
+  .prefixed(animation-name, ~"fadeOutDownBig");
+}
+
+.keyframes(~"fadeOutLeftBig", {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    .prefixed(transform, translate3d(-2000px,0,0));
+  }
+});
+
+.fadeOutLeftBig() {
+  .prefixed(animation-name, ~"fadeOutLeftBig");
+}
+
+.keyframes(~"fadeOutRightBig", {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    .prefixed(transform, translate3d(2000px,0,0));
+  }
+});
+
+.fadeOutRightBig() {
+  .prefixed(animation-name, ~"fadeOutRightBig");
+}
+
+.keyframes(~"fadeOutUpBig", {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    .prefixed(transform, translate3d(0,-2000px,0));
+  }
+});
+
+.fadeOutUpBig() {
+  .prefixed(animation-name, ~"fadeOutUpBig");
+}

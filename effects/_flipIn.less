@@ -1,0 +1,54 @@
+/* FLIP IN X & Y */
+.keyframes(~"flipInX", {
+  from {
+    opacity: 0;
+    .prefixed(transform, perspective(400px) rotate3d(1,0,0,90deg));
+    .prefixed(animation-timing-function, ease-in);
+  }
+  40% {
+    .prefixed(transform, perspective(400px) rotate3d(1,0,0,-20deg));
+    .prefixed(animation-timing-function, ease-in);
+  }
+  60% {
+    opacity: 1;
+    .prefixed(transform, perspective(400px) rotate3d(1,0,0,10deg));
+  }
+  80% {
+    .prefixed(transform, perspective(400px) rotate3d(1,0,0,-5deg));
+  }
+  to {
+    .prefixed(transform, perspective(400px));
+  }
+});
+
+.flipInX() {
+  .prefixed(animation-name, ~"flipInX");
+  .prefixed(animation-duration, 0.75s);
+  .prefixed(backface-visibility, visible) !important;
+}
+
+.keyframes(~"flipInY", {
+  from {
+    opacity: 0;
+    .prefixed(transform, perspective(400px) rotate3d(0,1,0,90deg));
+  }
+  40% {
+    .prefixed(transform, perspective(400px) rotate3d(0,1,0,-20deg));
+  }
+  60% {
+    opacity: 1;
+    .prefixed(transform, perspective(400px) rotate3d(0,1,0,10deg));
+  }
+  80% {
+    .prefixed(transform, perspective(400px) rotate3d(0,1,0,-5deg));
+  }
+  to {
+    .prefixed(transform, perspective(400px));
+  }
+});
+
+.flipInY() {
+  .prefixed(animation-name, ~"flipInY");
+  .prefixed(animation-duration, 0.75s);
+  .prefixed(backface-visibility, visible) !important;
+}

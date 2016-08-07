@@ -1,0 +1,40 @@
+/* FLIP OUT X & Y */
+.keyframes(~"flipOutX", {
+  from {
+    .prefixed(transform, perspective(400px));
+  }
+  30% {
+    opacity: 1;
+    .prefixed(transform, perspective(400px) rotate3d(1,0,0,-20deg));
+  }
+  to {
+    opacity: 0;
+    .prefixed(transform, perspective(400px) rotate3d(1,0,0,90deg));
+  }
+});
+
+.flipOutX() {
+  .prefixed(animation-name, ~"flipOutX");
+  .prefixed(animation-duration, 0.75s);
+  .prefixed(backface-visibility, visible) !important;
+}
+
+.keyframes(~"flipOutY", {
+  from {
+    .prefixed(transform, perspective(400px));
+  }
+  30% {
+    opacity: 1;
+    .prefixed(transform, perspective(400px) rotate3d(0,1,0,-15deg));
+  }
+  to {
+    opacity: 0;
+    .prefixed(transform, perspective(400px) rotate3d(0,1,0,90deg));
+  }
+});
+
+.flipOutY() {
+  .prefixed(animation-name, ~"flipOutY");
+  .prefixed(animation-duration, 0.75s);
+  .prefixed(backface-visibility, visible) !important;
+}

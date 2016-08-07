@@ -1,0 +1,134 @@
+/* FADE IN (-DOWN, -LEFT, -RIGHT, & -UP) */
+.keyframes(~"fadeIn", {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+});
+
+.fadeIn() {
+  .prefixed(animation-name, ~"fadeIn");
+}
+
+.keyframes(~"fadeInDown", {
+  from {
+    opacity: 0;
+    .prefixed(transform, translate3d(0,-100%,0));
+  }
+  to {
+    opacity: 1;
+    .prefixed(transform, none);
+  }
+});
+
+.fadeInDown() {
+  .prefixed(animation-name, ~"fadeInDown");
+}
+
+.keyframes(~"fadeInLeft", {
+  from {
+    opacity: 0;
+    .prefixed(transform, translate3d(-100%,0,0));
+  }
+  to {
+    opacity: 1;
+    .prefixed(transform, none);
+  }
+});
+
+.fadeInLeft() {
+  .prefixed(animation-name, ~"fadeInLeft");
+}
+
+.keyframes(~"fadeInRight", {
+  from {
+    opacity: 0;
+    .prefixed(transform, translate3d(100%,0,0));
+  }
+  to {
+    opacity: 1;
+    .prefixed(transform, none);
+  }
+});
+
+.fadeInRight() {
+  .prefixed(animation-name, ~"fadeInRight");
+}
+
+.keyframes(~"fadeInUp", {
+  from {
+    opacity: 0;
+    .prefixed(transform, translate3d(0,100%,0));
+  }
+  to {
+    opacity: 1;
+    .prefixed(transform, none);
+  }
+});
+
+.fadeInUp() {
+  .prefixed(animation-name, ~"fadeInUp");
+}
+
+/* FADE IN BIG */
+.keyframes(~"fadeInDownBig", {
+  from {
+    opacity: 0;
+    .prefixed(transform, translate3d(0,-2000px,0));
+  }
+  to {
+    opacity: 1;
+    .prefixed(transform, none);
+  }
+});
+
+.fadeInDownBig() {
+  .prefixed(animation-name, ~"fadeInDownBig");
+}
+
+.keyframes(~"fadeInLeftBig", {
+  from {
+    opacity: 0;
+    .prefixed(transform, translate3d(-2000px,0,0));
+  }
+  to {
+    opacity: 1;
+    .prefixed(transform, none);
+  }
+});
+
+.fadeInLeftBig() {
+  .prefixed(animation-name, ~"fadeInLeftBig");
+}
+
+.keyframes(~"fadeInRightBig", {
+  from {
+    opacity: 0;
+    .prefixed(transform, translate3d(2000px,0,0));
+  }
+  to {
+    opacity: 1;
+    .prefixed(transform, none);
+  }
+});
+
+.fadeInRightBig() {
+  .prefixed(animation-name, ~"fadeInRightBig");
+}
+
+.keyframes(~"fadeInUpBig", {
+  from {
+    opacity: 0;
+    .prefixed(transform, translate3d(0,2000px,0));
+  }
+  to {
+    opacity: 1;
+    .prefixed(transform, none);
+  }
+});
+
+.fadeInUpBig() {
+  .prefixed(animation-name, ~"fadeInUpBig");
+}

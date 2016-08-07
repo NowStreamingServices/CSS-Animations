@@ -1,0 +1,23 @@
+/* SWING */
+.keyframes(~"swing", {
+  20% {
+    .prefixed(transform, rotate3d(0,0,1,15deg));
+  }
+  40% {
+    .prefixed(transform, rotate3d(0,0,1,-10deg));
+  }
+  60% {
+    .prefixed(transform, rotate3d(0,0,1,5deg));
+  }
+  80% {
+    .prefixed(transform, rotate3d(0,0,1,-5deg));
+  }
+  to {
+    .prefixed(transform, rotate3d(0,0,1,0deg));
+  }
+});
+
+.swing() {
+  .prefixed(animation-name, ~"swing");
+  .prefixed(transform-origin, top center);
+}

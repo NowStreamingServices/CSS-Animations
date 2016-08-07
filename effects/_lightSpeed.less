@@ -1,0 +1,50 @@
+/* LIGHTSPEED */
+.keyframes(~"lightSpeedIn", {
+  from {
+    opacity: 0;
+    .prefixed(transform, translate3d(-100%,0,0) skewX(30deg));
+  }
+  60% {
+    opacity: 1;
+    .prefixed(transform, skewX(20deg));
+  }
+  80% {
+    opacity: 1;
+    .prefixed(transform, skewX(-5deg));
+  }
+  to {
+    opacity: 1;
+    .prefixed(transform, none);
+  }
+});
+
+.lightSpeedIn() {
+  .prefixed(animation-name, lightSpeedIn);
+  .prefixed(animation-timing-function, ease-out);
+}
+
+.keyframes(~"lightSpeedOut", {
+  from {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+    .prefixed(transform, skewX(-5deg));
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    .prefixed(transform, translate3d(100%,0,0) skewX(30deg));
+  }
+  to {
+    opacity: 0;
+    .prefixed(transform, translate3d(100%,0,0) skewX(30deg));
+  }
+});
+
+.lightSpeedOut() {
+  .prefixed(animation-name, lightSpeedOut);
+  .prefixed(animation-timing-function, ease-in);
+}

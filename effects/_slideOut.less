@@ -1,0 +1,56 @@
+/* SLIDE OUT */
+.keyframes(~"slideOutDown", {
+  from {
+    .prefixed(transform, translate3d(0,0,0));
+  }
+  to {
+    visibility: hidden;
+    .prefixed(transform, translate3d(0,100%,0));
+  }
+});
+
+.slideOutDown() {
+  .prefixed(animation-name, ~"slideOutDown");
+}
+
+.keyframes(~"slideOutLeft", {
+  from {
+    .prefixed(transform, translate3d(0,0,0));
+  }
+  to {
+    visibility: hidden;
+    .prefixed(transform, translate3d(-100%,0,0));
+  }
+});
+
+.slideOutLeft() {
+  .prefixed(animation-name, ~"slideOutLeft");
+}
+
+.keyframes(~"slideOutRight", {
+  from {
+    .prefixed(transform, translate3d(0,0,0));
+  }
+  to {
+    visibility: hidden;
+    .prefixed(transform, translate3d(100%,0,0));
+  }
+});
+
+.slideOutRight() {
+  .prefixed(animation-name, ~"slideOutRight");
+}
+
+.keyframes(~"slideOutUp", {
+  from {
+    .prefixed(transform, translate3d(0,0,0));
+  }
+  to {
+    visibility: hidden;
+    .prefixed(transform, translate3d(0,-100%,0));
+  }
+});
+
+.slideOutUp() {
+  .prefixed(animation-name, ~"slideOutUp");
+}

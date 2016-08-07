@@ -1,0 +1,80 @@
+/* ROTATE IN */
+.keyframes(~"rotateIn", {
+  from {
+    opacity: 0;
+    .prefixed(transform-origin, center);
+    .prefixed(transform, rotate3d(0,0,1,-200deg));
+  }
+  to {
+    opacity: 1;
+    .prefixed(transform-origin, center);
+    .prefixed(transform, none);
+  }
+});
+
+.rotateIn() {
+  .prefixed(animation-name, ~"rotateIn");
+}
+
+.keyframes(~"rotateInDownLeft", {
+  from {
+    opacity: 0;
+    .prefixed(transform-origin, left bottom);
+    .prefixed(transform, rotate3d(0,0,1,-45deg));
+  }
+  to {
+    opacity: 1;
+    .prefixed(transform-origin, left bottom);
+    .prefixed(transform, none);
+  }
+});
+
+.rotateInDownLeft() {
+  .prefixed(animation-name, ~"rotateInDownLeft");
+}
+
+.keyframes(~"rotateInDownRight", {
+  from {
+    opacity: 0;
+    .prefixed(transform-origin, right bottom);
+    .prefixed(transform, rotate3d(0,0,1,45deg));
+  }
+  to {
+    opacity: 1;
+    .prefixed(transform-origin, right bottom);
+    .prefixed(transform, none);
+  }
+});
+
+.rotateInDownRight() {
+  .prefixed(animation-name, ~"rotateInDownRight");
+}
+
+.keyframes(~"rotateInUpLeft", {
+  from {
+    opacity: 0;
+    .prefixed(transform-origin, left bottom);
+    .prefixed(transform, rotate3d(0,0,1,45deg));
+  }
+  to {
+    opacity: 1;
+    .prefixed(transform-origin, left bottom);
+    .prefixed(transform, none);
+  }
+});
+
+.rotateInUpLeft() {
+  .prefixed(animation-name, ~"rotateInUpLeft");
+}
+
+.keyframes(~"rotateInUpRight", {
+  from {
+    opacity: 0;
+    .prefixed(transform-origin, right bottom);
+    .prefixed(transform, rotate3d(0,0,1,-90deg));
+  }
+});
+
+.rotateInUpRight() {
+  .prefixed(animation-name, ~"rotateInUpRight");
+}
